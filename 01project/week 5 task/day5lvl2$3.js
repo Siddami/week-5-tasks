@@ -39,13 +39,21 @@ console.log(sorted)
 let minimumAge= sorted[0]
 console.log(minimumAge)
 
-let maximumAge= sorted.slice(10 -1)
+let maximumAge= sorted[9]
 console.log(maximumAge)
 
 //Find the average age(all items divided by number of items)
-
+const average = (ages) => ages.reduce((a, b) => a + b) / ages.length;
+let avg= (average([19,22,19,24,20,25,26,24,25,24]));
+console.log(avg)
 // Find the range of the ages(max minus min)
 let range = maximumAge - minimumAge;
 console.log(range)
 
 //Compare the value of (min - average) and (max - average), use abs() method 1.
+let comp1= Math.abs(minimumAge - avg);
+let comp2= Math.abs(maximumAge - avg);
+
+console.log(comp1)
+console.log(comp2)
+
